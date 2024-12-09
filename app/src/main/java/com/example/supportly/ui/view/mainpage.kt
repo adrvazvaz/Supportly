@@ -19,8 +19,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.supportly.R
 
+
+
 @Composable
-fun MainPage() {
+fun MainPage(onNavigateToLogin: () -> Unit) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -72,7 +74,7 @@ fun MainPage() {
             )
             Spacer(modifier = Modifier.height(8.dp))
             Button(
-                onClick = { /* Acción para iniciar sesión */ },
+                onClick = { onNavigateToLogin() },
                 colors = ButtonDefaults.buttonColors(Color.Blue),
                 shape = RoundedCornerShape(8.dp),
                 modifier = Modifier.fillMaxWidth(0.8f)
@@ -87,8 +89,4 @@ fun MainPage() {
     }
 }
 
-@Preview(showBackground = true)
-@Composable
-fun PreviewMainPage() {
-    MainPage()
-}
+
