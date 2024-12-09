@@ -31,7 +31,8 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun TipusRegister(
-    onNavigateToResgister: () -> Unit,
+    onNavigateToRegisterMentor: () -> Unit,
+    onNavigateToRegisterAlumne: () -> Unit
 ){
 
     val opciones = listOf("Mentor", "Alumne")
@@ -77,13 +78,24 @@ fun TipusRegister(
                 }
         }
 
+            ////////COMPORBAR//////////
+
             // HACER QUE SI LA SELECCION DE OPCION ES ALUMNO, SE VAYA AL REGISTRO DE ALUMNOS
             // O QUE SI LA SELECCIONES PROFESOR SE VAYA AL REGISTRO DE PROFESOR
+
+            ////////COMPORBAR//////////
 
         Spacer(modifier = Modifier.height(50.dp))
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Button(
-                onClick = {onNavigateToResgister()},
+                onClick = {
+                    if (opcionSeleccionada == "Alumne") {
+                        onNavigateToRegisterMentor()
+                    } else if (opcionSeleccionada == "Mentor") {
+                        onNavigateToRegisterAlumne()
+
+                    }
+                },
                 colors = ButtonDefaults.buttonColors(Color.Blue),
                 modifier = Modifier
                     .fillMaxWidth()
@@ -95,6 +107,9 @@ fun TipusRegister(
     }
 }
 }
+
+
+
 
 
 
