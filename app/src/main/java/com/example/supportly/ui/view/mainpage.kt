@@ -26,7 +26,7 @@ fun MainPage() {
             .fillMaxSize()
             .padding(15.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.SpaceBetween
+        verticalArrangement = Arrangement.Top
     ) {
         // Imagen del logo
         Image(
@@ -39,6 +39,7 @@ fun MainPage() {
         )
 
 
+        Spacer(modifier = Modifier.height(150.dp))
 
         // Botón Registrarse
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
@@ -60,6 +61,8 @@ fun MainPage() {
                 )
             }
         }
+
+        Spacer(modifier = Modifier.height(30.dp))
 
         // Botón Iniciar sesión
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
