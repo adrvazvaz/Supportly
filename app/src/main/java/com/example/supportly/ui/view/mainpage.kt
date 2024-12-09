@@ -14,7 +14,6 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.supportly.R
@@ -22,7 +21,11 @@ import com.example.supportly.R
 
 
 @Composable
-fun MainPage(onNavigateToLogin: () -> Unit) {
+fun MainPage(
+    onNavigateToLogin: () -> Unit,
+    onNavigateToSelectResgister: () -> Unit,
+
+    ) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -51,7 +54,7 @@ fun MainPage(onNavigateToLogin: () -> Unit) {
             )
             Spacer(modifier = Modifier.height(8.dp))
             Button(
-                onClick = { /* Acción para registrarse */ },
+                onClick = { onNavigateToSelectResgister() },
                 colors = ButtonDefaults.buttonColors(Color.Blue),
                 shape = RoundedCornerShape(8.dp),
                 modifier = Modifier.fillMaxWidth(0.8f)
