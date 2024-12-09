@@ -77,8 +77,11 @@ fun TipusRegister(
                 }
         }
 
+            //ATENCIIÓN!!!!!!!
+
             // HACER QUE SI LA SELECCION DE OPCION ES ALUMNO, SE VAYA AL REGISTRO DE ALUMNOS
             // O QUE SI LA SELECCIONES PROFESOR SE VAYA AL REGISTRO DE PROFESOR
+
 
         Spacer(modifier = Modifier.height(50.dp))
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
